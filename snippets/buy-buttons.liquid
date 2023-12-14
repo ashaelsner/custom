@@ -95,7 +95,7 @@
             {%- render 'loading-spinner' -%}
           </button>
        {% endcomment %}
-        <input type="submit" name="Add" value="Add" />
+        <input type="submit" class="custom_btn" name="Add" value="Add" />
           {%- if show_dynamic_checkout -%}
             {{ form | payment_button }}
           {%- endif -%}
