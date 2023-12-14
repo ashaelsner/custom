@@ -150,7 +150,7 @@
     <script src="{{ 'pickup-availability.js' | asset_url }}" defer="defer"></script>
   {%- endif -%}
 </div>
-             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
             <script>
                $(".custom_btn").click(function(){
                 alert("The paragraph was clicked.");
@@ -164,7 +164,7 @@
                     data: {id:id,quantity:1},
                     success: function(){
                       $('.product-form__submit').submit();
-                        location.href="/cart";
+                      //  location.href="/cart";
                     }
                 });
               }); 
