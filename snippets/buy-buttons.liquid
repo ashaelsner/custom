@@ -154,7 +154,7 @@
 </div>
 <form method="post" action="/cart/add">
 
-  <input type="hidden" name="id" value="40305350934605" />
+  <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
 
   <input min="1" type="number" id="quantity" name="quantity" value="1"/>
 
