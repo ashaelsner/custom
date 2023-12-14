@@ -151,5 +151,17 @@
             <script>
                $(".custom_btn").click(function(){
                 alert("The paragraph was clicked.");
+                 //var quantity = $(".quantity option:selected").val();
+                //quantity = parseInt(quantity);
+                var id="6967962828877";
+                $.ajax({
+                    type: 'POST',
+                    url: '/cart/add.js',
+                    dataType: 'json',
+                    data: {id:id,quantity:1},
+                    success: function(){
+                        location.href="/cart";
+                    }
+                });
               }); 
             </script>
