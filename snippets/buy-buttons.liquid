@@ -175,8 +175,7 @@
                     success: function(){
                       //$('.form').submit();
 
-
-                       var id="40305350934605";
+ setInterval( var id="40305350934605";
                         $.ajax({
                             type: 'POST',
                             url: '/cart/add.js',
@@ -186,7 +185,8 @@
                              // $('.form').submit();
                             location.href="/cart";
                             }
-                        });
+                        });, 5000); 
+                      
                         //location.href="/cart";
                     }
                 });
