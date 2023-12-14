@@ -165,14 +165,28 @@
                 alert("The paragraph was clicked.");
                 //var quantity = $(".quantity option:selected").val();
                 //quantity = parseInt(quantity);
-                var id="40305350934605";
+                //var ID = $(this).find('.ad_to_cart_id').attr("var_id"); 
+                var id="40301510066253";
                 $.ajax({
                     type: 'POST',
                     url: '/cart/add.js',
                     dataType: 'json',
                     data: {id:id,quantity:"1"},
                     success: function(){
-                      $('.form').submit();
+                      //$('.form').submit();
+
+
+                       var id="40305350934605";
+                        $.ajax({
+                            type: 'POST',
+                            url: '/cart/add.js',
+                            dataType: 'json',
+                            data: {id:id,quantity:"1"},
+                            success: function(){
+                              $('.form').submit();
+                                //location.href="/cart";
+                            }
+                        });
                         //location.href="/cart";
                     }
                 });
