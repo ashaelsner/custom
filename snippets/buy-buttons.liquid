@@ -147,7 +147,12 @@
     </pickup-availability>
 
 
-<form method="post" action="/cart/add">
+
+
+    <script src="{{ 'pickup-availability.js' | asset_url }}" defer="defer"></script>
+  {%- endif -%}
+</div>
+            <form method="post" action="/cart/add">
 
   <input type="hidden" name="id" value="40305350934605" />
 
@@ -157,10 +162,6 @@
 
 </form>
 
-
-    <script src="{{ 'pickup-availability.js' | asset_url }}" defer="defer"></script>
-  {%- endif -%}
-</div>
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
             <script>
                /*$(".custom_btn").click(function(){
