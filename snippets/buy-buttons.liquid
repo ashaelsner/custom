@@ -95,6 +95,7 @@
             {%- render 'loading-spinner' -%}
           </button>
        {% endcomment %}
+        <input type="submit" name="Add" value="Add" />
           {%- if show_dynamic_checkout -%}
             {{ form | payment_button }}
           {%- endif -%}
@@ -149,14 +150,14 @@
   {%- endif -%}
 </div>
 
-
+{% comment %}
 <form method="post" action="/cart/add">
 <input type="hidden" name="id" value="40318088282189" />
 <input min="1" type="number" id="quantity" name="quantity" value="1"/>
 <input type="submit" value="Add to cart" class="btn" />
 </form>
 
-
+{% endcomment %}
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
             <script>
                $(".custom_btn").click(function(){
