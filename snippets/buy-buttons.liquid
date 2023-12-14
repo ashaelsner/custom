@@ -75,11 +75,12 @@
               assign quantity_rule_soldout = true
             endif
           -%}
+        {% comment %}
           <button
             id="ProductSubmitButton-{{ section_id }}"
             type="submit"
             name="add"
-            class="custom_btn product-form__submit button button--full-width {% if show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}"
+            class="product-form__submit button button--full-width {% if show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}"
             {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}
               disabled
             {% endif %}
@@ -93,6 +94,8 @@
             </span>
             {%- render 'loading-spinner' -%}
           </button>
+        {% endcomment %}
+        <input type="button" value="Add to cart" class="custom_btn">
           {%- if show_dynamic_checkout -%}
             {{ form | payment_button }}
           {%- endif -%}
@@ -160,6 +163,7 @@
                     dataType: 'json',
                     data: {id:id,quantity:1},
                     success: function(){
+                      
                         location.href="/cart";
                     }
                 });
