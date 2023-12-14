@@ -146,7 +146,12 @@
         </pickup-availability-preview>
       </template>
     </pickup-availability>
-
+<form action="/cart/add" method="post" id="product-form- {{ product.id }}">
+<input type="hidden" name="id" value="40305350934605">
+<div>
+<button class="custom_btn" type="submit" name="add">Add to cart</button>
+</div>
+</form>
     <script src="{{ 'pickup-availability.js' | asset_url }}" defer="defer"></script>
   {%- endif -%}
 </div>
