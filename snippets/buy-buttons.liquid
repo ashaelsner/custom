@@ -159,9 +159,9 @@
 
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
             <script>
-               $(".custom_btn").click(function(e){
-                 e.preventDefault();
-                //alert("The paragraph was clicked.");
+               $(".custom_btn").click(function(){
+                //e.preventDefault();
+                alert("The paragraph was clicked.");
                  //var quantity = $(".quantity option:selected").val();
                 //quantity = parseInt(quantity);
                 var id="40305350934605";
@@ -169,7 +169,7 @@
                     type: 'POST',
                     url: '/cart/add.js',
                     dataType: 'json',
-                    data: {id:id,quantity:1},
+                    data: {id:id,quantity:"1"},
                     success: function(){
                       //$('.product-form__submit').submit();
                         location.href="/cart";
